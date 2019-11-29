@@ -2,10 +2,6 @@
 
 React Native component for draggable and resizable manipulation.
 
-## Show Cases
-
-![demo.gif](demo.gif)
-
 ## Getting Started
 
 - [Installation](#installation)
@@ -50,8 +46,6 @@ import {
 </DragResizeBlock>
 ```
 
-You can watch more examples in `example` directory
-
 ### Properties
 
 #### Basic props of `DragResizeBlock`
@@ -86,18 +80,8 @@ You can watch more examples in `example` directory
 | onInit | - | `function` | Return container parameters `{x, y, w, h}`, after component initialization. You can send this object to `limitation` property of `DragResizeBlock` component. |
 | style | - | `style` | Custom styles. |
 
-### Run example
 
-To run example call this commands in terminal:
-
-```bash
-$ cd example
-$ npm i
-$ react-native run-android
-$ react-native run-ios
-```
-
-#### Notice!
+#### Note
 
 If your `npm` not support symlinks, then call this code from repository root directory:
 
