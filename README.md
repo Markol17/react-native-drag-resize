@@ -1,6 +1,6 @@
 # react-native-drag-resize
 
-React Native component for draggable and resizable manipulation inspired by .
+React Native component for draggable and resizable manipulation inspired by [react-ntive-drag-resize](https://www.npmjs.com/package/react-native-drag-resize).
 
 ## Getting Started
 
