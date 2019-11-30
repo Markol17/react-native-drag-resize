@@ -30,27 +30,43 @@ const DEFAULT_Z_INDEX = 1;
  * Drag resize block.
  */
 export class DragResizeBlock extends Component {
+componentWillReceiveProps(){
+  console.log("updates")
+  let {
+   x,
+   y,
+   w,
+   h,
+  } = this.props;
+   if(x != this.state.x || y != this.state.y || w != this.state.w || h != this.state.h){
 
+    this.setState({
+      x: x,
+      y: y,
+      w: w,
+      h: h,
+    })
+     }
+
+ }
   constructor(props) {
     super(props);
 
-    // const {
-    //   x,
-    //   y,
-    //   w,
-    //   h,
-    //   minW,
-    //   minH,
-    // } = props;
+     const {
+       x,
+       y,
+       w,
+       h,
+       minW,
+       minH,
+     } = props;
 
     this.state = {
       isSelected: false,
-      x:this.props.x,
-      y: this.props.y,
-      w: this.props.w,//w < minW ? minW : w,
-      h: this.props.h,//h < minH ? minH : h,
-      minH:this.props.minH,
-      minW:this.props.minW,
+       x,
+       y,
+       w: w < minW ? minW : w,
+       h: h < minH ? minH : h,
     };
 
     /**
