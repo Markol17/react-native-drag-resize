@@ -23,7 +23,7 @@ export const AXIS_X = 'x';
 export const AXIS_Y = 'y';
 export const AXIS_ALL = 'all';
 
-const CONNECTOR_SIZE = 14;
+const CONNECTOR_SIZE = 17;
 const DEFAULT_Z_INDEX = 1;
 
 /**
@@ -34,21 +34,23 @@ export class DragResizeBlock extends Component {
   constructor(props) {
     super(props);
 
-    const {
-      x,
-      y,
-      w,
-      h,
-      minW,
-      minH,
-    } = props;
+    // const {
+    //   x,
+    //   y,
+    //   w,
+    //   h,
+    //   minW,
+    //   minH,
+    // } = props;
 
     this.state = {
       isSelected: false,
-      x,
-      y,
-      w: w < minW ? minW : w,
-      h: h < minH ? minH : h,
+      x:this.props.x,
+      y: this.props.y,
+      w: this.props.w,//w < minW ? minW : w,
+      h: this.props.h,//h < minH ? minH : h,
+      minH:this.props.minH,
+      minW:this.props.minW,
     };
 
     /**

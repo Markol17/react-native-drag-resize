@@ -109,6 +109,7 @@ export class Connector extends Component {
           width: size,
           height: size,
           borderWidth: 2,
+          borderRadius:4,
           borderColor: 'black',
           backgroundColor: 'white'
         }}
